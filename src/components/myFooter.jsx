@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col, Image, Form, Dropdown } from "react-bootstrap";
-import { BsQuestionCircleFill, BsFillGearFill } from "react-icons/bs";
+import {BsFillGearFill } from "react-icons/bs";
 
 const MyFooter = () => {
   return (
@@ -127,7 +127,6 @@ const MyFooter = () => {
                 </div>
 
                 <div className="ml-2">
-                  <div>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"
@@ -143,7 +142,7 @@ const MyFooter = () => {
                   
                     <a href="#" className="listFooter text-decoration-none"> Recommendation transparency</a>
                   <p>Learn more about Recommended Content.</p>
-                </div></div>
+                </div>
               </div>
 
               <div>

@@ -113,6 +113,7 @@ body{
 .footer-container ul li {
   list-style-type: none;
   color: #D2D1CE;
+  white-space: nowrap;
   
 }
 .privacyeterms {
@@ -120,15 +121,13 @@ padding: 0;
 }
 
 .listFooter{
- color:#BFBEBB
- ;
-}
-.selectLanguage{
-  padding: 0.375rem 6.75rem;
-}
-.selectLanguage label {
-  padding: 0.375rem 6.75rem;
-}
-.selectLanguage control{
+ color:#BFBEBB ;
+ white-space: nowrap;
 
 }
+.selectLanguage{
+  padding:-0.625rem 6.75rem}
+.selectLanguage label {
+  white-space: nowrap;
+}
+
