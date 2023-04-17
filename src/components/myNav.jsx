@@ -2,7 +2,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import * as Icon from "react-bootstrap-icons";
-import {Row,Col,Form,NavDropdown} from "react-bootstrap";
+import {Form} from "react-bootstrap";
 
 
 function MyNav() {
