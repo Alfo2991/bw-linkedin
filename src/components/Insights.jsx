@@ -90,19 +90,20 @@ function Insights() {
                     target="_self"
                     href="https://www.linkedin.com/me/profile-views"
                   >
-                    <div className="discoverWho pvs-entity__image"></div>
-                    <span className="mr-2 hoverable-link-text">
-                      <span aria-hidden="true">9 profile views</span>
-                      <span className="visually-hidden">9 profile views</span>
-                    </span>
-                    <span className=" t-14 t-normal mb-1">
-                      <span aria-hidden="true">
-                        Discover who's viewed your profile.
+                    <div className="discoverWho pvs-entity__image">
+                      <span className="mr-2 hoverable-link-text">
+                        <span aria-hidden="true">9 profile views</span>
+                        <span className="visually-hidden">9 profile views</span>
                       </span>
-                      <span className="visually-hidden">
-                        Discover who's viewed your profile.
+                      <span className=" t-14 t-normal mb-1">
+                        <span aria-hidden="true">
+                          Discover who's viewed your profile.
+                        </span>
+                        <span className="visually-hidden">
+                          Discover who's viewed your profile.
+                        </span>
                       </span>
-                    </span>
+                    </div>
                   </a>
                 </div>
               </div>

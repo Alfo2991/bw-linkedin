@@ -7,9 +7,6 @@ const Sidebar = () => {
       <Card
         style={{
           width: "18rem",
-          position: "absolute",
-          right: 180,
-          marginRight: "20px",
         }}
       >
         <Card.Body className="cardbody">
