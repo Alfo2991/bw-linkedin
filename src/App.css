@@ -147,7 +147,8 @@ body {
   align-items: center;
   margin-right: 5px;
 }
-.discoverWho {
+.discoverWho,
+.discoverWho span:first-child {
   font-size: 16px;
   line-height: 1.2;
   margin: 0;
@@ -326,6 +327,7 @@ a {
 }
 
 .buttons button {
+  white-space: nowrap;
   border-radius: 100px;
   padding-inline: 18px;
   padding-block: 3px;
@@ -377,11 +379,16 @@ a {
   border-radius: 100%;
   color: #616160;
 }
+.profileWall {
+  margin-top: 30px;
+  width: 100%;
+}
 
 /* MySideBar */
 
 .sidebarcard {
-  margin-top: 10px;
+  margin-top: 30px;
+  margin-left: 150px;
 }
 
 .title1 {
@@ -442,7 +449,6 @@ a {
   margin-top: 0px;
   padding: 5px;
   width: 200px;
-  margin-left: 25px;
   color: rgb(179, 177, 177);
 }
 
