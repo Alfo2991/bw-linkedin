@@ -1,6 +1,6 @@
 function TopProfile() {
   return (
-    <div>
+    <div className="topprofile">
       <div className="bigContainer">
         <div className="profileWall">
           <img
