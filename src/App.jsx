@@ -1,17 +1,17 @@
-import './App.css';
-import MyNav from './components/myNav';
-import MyFooter from './components/myFooter';
-import RightSidebar from "./components/mySideBar";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "./App.css";
+import MyNav from "./components/myNav";
+import MyFooter from "./components/myFooter";
 
+import "bootstrap/dist/css/bootstrap.min.css";
+import TopProfile from "./components/TopProfile";
 
 function App() {
   return (
     <div className="App">
-        <MyNav/>
-        {/* <RightSidebar/> */}
-        <MyFooter/>
-       
+      <MyNav />
+      <TopProfile />
+      {/* <RightSidebar/> */}
+      <MyFooter />
     </div>
   );
 }
