@@ -132,7 +132,7 @@ const MyFooter = () => {
           <div className="d-flex flex-column">
             <label>Seleziona lingua</label>
             <select name="language">
-              <option value="Italian">Italian (talia)</option>
+              <option value="Italian">Italian (Italia)</option>
               <option value="English">English</option>
               <option value="German">German</option>
               <option value="Albanian">Albanian</option>
@@ -149,4 +149,4 @@ const MyFooter = () => {
 };
 
 export default MyFooter;
-//supercalifragili
+
