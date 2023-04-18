@@ -247,3 +247,133 @@ body {
 .cardImgsideBar {
   line-height: 1.2;
 }
+
+.background {
+  max-height: 30vh;
+  width: 100%;
+}
+
+.profileWall {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.imageProfile {
+  position: absolute;
+  z-index: 2;
+  left: 3%;
+  bottom: -20%;
+  display: inline-block;
+}
+
+.imageProfile img {
+  width: 28%;
+  border-radius: 100%;
+  border: 10px solid white;
+}
+.camera {
+  position: absolute;
+  z-index: 3;
+  right: 20px;
+  top: 20px;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0a66c2;
+}
+
+.camera img {
+  width: 30%;
+  border-radius: 100%;
+}
+
+.botContainer {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+}
+
+.name {
+  font-weight: 600;
+  font-size: 1.8rem;
+}
+
+.address {
+  color: #777777;
+  font-size: 0.8rem;
+  margin-bottom: 20px;
+}
+
+.formazione {
+  margin-bottom: 5px;
+}
+
+.address span {
+  color: #0a66c2;
+  font-weight: 600;
+}
+
+a {
+  text-decoration: none;
+}
+
+.buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.buttons button {
+  border-radius: 100px;
+  padding-inline: 18px;
+  padding-block: 3px;
+  font-weight: 700;
+  border: none;
+}
+
+#blu {
+  color: white;
+  background-color: #0a66c2;
+}
+
+#bluW {
+  border: #0a66c2 1px solid;
+  color: #0a66c2;
+  font-weight: 500;
+}
+
+#grigio {
+  color: #666666;
+  font-weight: 400;
+  border: #666666 1px solid;
+}
+
+.contRight {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-right: 10%;
+}
+.botContainer {
+  position: relative;
+}
+
+.penna {
+  position: absolute;
+  z-index: 4;
+  right: 20px;
+  top: -20px;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.penna img {
+  width: 30%;
+  border-radius: 100%;
+  color: #616160;
+}
