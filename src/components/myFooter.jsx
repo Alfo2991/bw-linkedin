@@ -63,9 +63,9 @@ const MyFooter = () => {
             </ul>
           </div>
         </Col>
-        <Col lg={3}>
+        <Col lg={3} className="exat">
           <div className="d-flex mb-3">
-            <div className="d-flex align-items-center">
+            <div className="d-flex exat">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -85,7 +85,7 @@ const MyFooter = () => {
             </div>
           </div>
           <div className="d-flex ">
-            <div className="d-flex align-items-center">
+            <div className="d-flex ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -105,7 +105,7 @@ const MyFooter = () => {
             </div>
           </div>
           <div className="d-flex t">
-            <div className="d-flex align-items-center">
+            <div className="d-flex ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"

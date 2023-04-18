@@ -377,3 +377,71 @@ a {
   border-radius: 100%;
   color: #616160;
 }
+
+/* MySideBar */
+
+.sidebarcard {
+  margin-top: 10px;
+}
+
+.title1 {
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.hr1 {
+  margin-top: -10px;
+  padding: 5px;
+  width: 200px;
+  margin-left: 25px;
+  color: rgb(179, 177, 177);
+}
+
+.btn1 {
+  border-radius: 50px;
+  border: 1px solid #666666;
+  width: 140px;
+  height: 33px;
+  color: #7c7c7c;
+  background-color: white;
+  margin-left: 50px;
+  margin-top: -10px;
+}
+
+.send {
+  margin-right: 5px;
+  color: #666666;
+}
+
+.profileimg {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.nome {
+  font-weight: 600;
+  color: #767676;
+  font-size: 16px;
+}
+
+.primo {
+  font-weight: 200;
+}
+
+.title2 {
+  margin-bottom: 15px;
+  font-size: 16px;
+  text-align: center;
+  font-weight: 700;
+  color: #7e7e7e;
+}
+
+.hr2 {
+  margin-top: 0px;
+  padding: 5px;
+  width: 200px;
+  margin-left: 25px;
+  color: rgb(179, 177, 177);
+}
