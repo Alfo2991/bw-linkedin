@@ -1,9 +1,9 @@
-import { Container, Col, Card, Image, Row, Button } from "react-bootstrap";
+import { Container, Col, Card, Row, Button, Image } from "react-bootstrap";
 import "./Profile.css";
 import "./ProfileModal.css";
-import ProfileEditForm from "../ProfileEditingForm";
+import ProfileEditForm from "./ProfileEditingForm";
 
-const profiloUtente = ({ userID }) => {
+const ProfiloUtente = ({ userID }) => {
   return (
     <>
       <Card
@@ -20,7 +20,7 @@ const profiloUtente = ({ userID }) => {
           }}
         >
           <Row className="profile__bg">
-            <img
+            <Image
               src="https://static.vecteezy.com/system/resources/thumbnails/008/996/859/small/abstract-minimal-earth-tone-long-banner-template-organic-shapes-floral-and-leaves-background-with-copy-space-for-text-facebook-cover-free-vector.jpg"
               alt=""
             />
@@ -90,4 +90,4 @@ const profiloUtente = ({ userID }) => {
     </>
   );
 };
-export default profiloUtente;
+export default ProfiloUtente;

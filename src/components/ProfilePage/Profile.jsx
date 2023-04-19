@@ -1,11 +1,11 @@
-import { Container, Col, Card, Image, Row, Button } from "react-bootstrap";
+import { Col } from "react-bootstrap";
 import Attivita from "../Attivita/Attivita";
 import Education from "../Education/Education";
 import { useEffect } from "react";
 import { useParams } from "react-router";
 import Esperienze from "../Esperienza/Esperienze";
 import "./Profile.css";
-import profiloUtente from "./ProfiloUtente";
+import ProfiloUtente from "../ProfilePage/ProfiloUtente";
 
 const Profile = ({ userProfile, setUserProfile }) => {
   const params = useParams();
@@ -14,7 +14,7 @@ const Profile = ({ userProfile, setUserProfile }) => {
   return (
     <>
       <Col className="home__wrap pr-5">
-        <profiloUtente
+        <ProfiloUtente
           userProfile={userProfile}
           setUserProfile={setUserProfile}
         />

@@ -4,11 +4,7 @@ import Card from "react-bootstrap/Card";
 const Sidebar = () => {
   return (
     <div className="sidebarcard">
-      <Card
-        style={{
-          width: "18rem",
-        }}
-      >
+      <Card>
         <Card.Body className="cardbody">
           <Card.Title className="title1">Altri Profili consultati</Card.Title>
           <Card.Text className="align-itens-center text-align nome">

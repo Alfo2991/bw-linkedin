@@ -2,15 +2,20 @@ import "./App.css";
 import MyNav from "./components/myNav";
 import MyFooter from "./components/myFooter";
 import "bootstrap/dist/css/bootstrap.min.css";
-//import TopProfile from "./components/TopProfile";
-import Profile from "./components/ProfilePage/Profile";
+import TopProfile from "./components/TopProfile";
+
+import { Container, Row, Col, Form, Dropdown } from "react-bootstrap";
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <MyNav />
-      <Profile />
-      <MyFooter />
+      <Container fluid="md">
+        <div className="App">
+          <TopProfile />
+        </div>
+        <MyFooter />
+      </Container>
     </div>
   );
 }
