@@ -2,11 +2,7 @@ import React from "react";
 
 function Insights() {
   return (
-    <section
-      id="ember165"
-      className="artdeco-card ember-view relative break-words pb3 mt2"
-      tabIndex="-1"
-    >
+    <section id="ember165" className="artdeco-card ember-view relative break-words pb3 mt2" tabIndex="-1">
       <div id="insights" className="pv-profile-card__anchor"></div>
       <div className="pvs-header__container">
         <div className="pvs-header__top-container--no-stack">
@@ -18,12 +14,7 @@ function Insights() {
               </h2>
               <p className="pvs-header__subtitle pvs-header__optional-link text-body-small">
                 <span aria-hidden="true">
-                  <li-icon
-                    aria-hidden="true"
-                    type="visibility"
-                    className="v-align-bottom"
-                    size="small"
-                  >
+                  <li-icon aria-hidden="true" type="visibility" className="v-align-bottom" size="small">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 16 16"
@@ -48,7 +39,7 @@ function Insights() {
         <ul className="pvs-list ph5 display-flex flex-row flex-wrap">
           <li className="pvs-list__item--three-column ">
             <div className="pvs-entity pvs-entity--padded pvs-list__item--no-padding-in-columns">
-              <div>
+              <div className="mot">
                 <a
                   data-field="insights_wvmp"
                   className="optional-action-target-wrapper display-flex"
@@ -59,12 +50,7 @@ function Insights() {
                 >
                   <div className="ivm-image-view-model pvs-entity__image ">
                     <div className="ivm-view-attr__img-wrapper ivm-view-attr__img-wrapper--use-img-tag display-flex">
-                      <li-icon
-                        aria-hidden="true"
-                        type="people"
-                        className="ivm-view-attr__icon--icon  "
-                        size="large"
-                      >
+                      <li-icon aria-hidden="true" type="people" className="ivm-view-attr__icon--icon  " size="large">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           viewBox="0 0 24 24"
@@ -91,17 +77,15 @@ function Insights() {
                     href="https://www.linkedin.com/me/profile-views"
                   >
                     <div className="discoverWho pvs-entity__image">
-                      <span className="mr-2 hoverable-link-text">
-                        <span aria-hidden="true">9 profile views</span>
+                      <span className="mr-2 hoverable-link-text mb-1">
+                        <span aria-hidden="true" className="text-black views">
+                          9 profile views
+                        </span>
                         <span className="visually-hidden">9 profile views</span>
                       </span>
                       <span className=" t-14 t-normal mb-1">
-                        <span aria-hidden="true">
-                          Discover who's viewed your profile.
-                        </span>
-                        <span className="visually-hidden">
-                          Discover who's viewed your profile.
-                        </span>
+                        <span aria-hidden="true">Discover who's viewed your profile.</span>
+                        <span className="visually-hidden">Discover who's viewed your profile.</span>
                       </span>
                     </div>
                   </a>
