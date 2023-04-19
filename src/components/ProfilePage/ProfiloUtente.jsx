@@ -1,9 +1,9 @@
-import { Container, Col, Card, Image, Row, Button } from "react-bootstrap";
+import { Container, Col, Card, Row, Button } from "react-bootstrap";
 import "./Profile.css";
 import "./ProfileModal.css";
-import ProfileEditForm from "../ProfileEditingForm";
+import ProfileEditForm from "./ProfileEditingForm";
 
-const profiloUtente = ({ userID }) => {
+const ProfiloUtente = ({ userID }) => {
   return (
     <>
       <Card
@@ -90,4 +90,4 @@ const profiloUtente = ({ userID }) => {
     </>
   );
 };
-export default profiloUtente;
+export default ProfiloUtente;
