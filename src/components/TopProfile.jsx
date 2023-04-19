@@ -3,6 +3,7 @@ import { Container, Row, Col, Form, Dropdown } from "react-bootstrap";
 
 import Sidebar from "./mySideBar";
 import Insights from "./Insights";
+import Resources from "./Resources";
 
 import "../App.css";
 function TopProfile() {
@@ -81,6 +82,7 @@ function TopProfile() {
 
         <Col md={4} className="sidebarContainer">
           <Sidebar />
+          <Resources />
         </Col>
       </Row>
     </div>
