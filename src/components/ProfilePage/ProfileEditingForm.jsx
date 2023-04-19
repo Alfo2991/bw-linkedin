@@ -1,4 +1,4 @@
-import "../Profile/ProfileEditingModal.css";
+import "./ProfileModifyForm.css";
 import { PencilFill, InfoSquareFill, PlusLg } from "react-bootstrap-icons";
 import Modal from "react-bootstrap/Modal";
 import Form from "react-bootstrap/Form";

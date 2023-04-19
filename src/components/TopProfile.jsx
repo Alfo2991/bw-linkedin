@@ -8,7 +8,7 @@ import "../App.css";
 function TopProfile() {
   return (
     <Container>
-      <div className="biggerContainer d-flex align-items-stretch">
+      <div className="biggerContainer d-flex justify-content-between align-items-stretch">
         <div className="bigContainer">
           <div className="profileWall">
             <img
