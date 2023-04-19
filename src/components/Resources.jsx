@@ -13,8 +13,8 @@ function Resources() {
           <div className="pvs-header__left-container--stack">
             <div className="pvs-header__title-container">
               <h2 className="pvs-header__title text-heading-large">
-                <span aria-hidden="true">Analytics</span>
-                <span className="visually-hidden">Analytics</span>
+                <span aria-hidden="true">Resources</span>
+                <span className="visually-hidden">Resources</span>
               </h2>
               <p className="pvs-header__subtitle pvs-header__optional-link text-body-small">
                 <span aria-hidden="true">
@@ -45,7 +45,7 @@ function Resources() {
         </div>
       </div>
       <div className="pvs-list__outer-container">
-        <ul className="pvs-list ph5 display-flex flex-row flex-wrap">
+        <ul className="pvs-list ph5 display-flex flex-row ">
           <li className="pvs-list__item--three-column ">
             <div className="pvs-entity pvs-entity--padded pvs-list__item--no-padding-in-columns">
               <div className="mot">
@@ -93,16 +93,18 @@ function Resources() {
                     <div className="discoverWho pvs-entity__image">
                       <span className="mr-2 hoverable-link-text mb-1">
                         <span aria-hidden="true" className="text-black views">
-                          9 profile views
+                          Creator Mode
                         </span>
-                        <span className="visually-hidden">9 profile views</span>
+                        <span className="visually-hidden">Creator Mode</span>
                       </span>
-                      <span className=" t-14 t-normal mb-1">
+                      <span className=" t-14 t-normal mb-1 text-nowrap">
                         <span aria-hidden="true">
-                          Discover who's viewed your profile.
+                          Get discovered, showcase content on your profile, and
+                          get access to creator tools
                         </span>
-                        <span className="visually-hidden">
-                          Discover who's viewed your profile.
+                        <span className="visually-hidden text-nowrap">
+                          Get discovered, showcase content on your profile, and
+                          get access to creator tools
                         </span>
                       </span>
                     </div>

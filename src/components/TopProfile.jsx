@@ -78,11 +78,11 @@ function TopProfile() {
             </div>
           </div>
           <Insights />
+          <Resources />
         </Col>
 
         <Col md={4} className="sidebarContainer">
           <Sidebar />
-          <Resources />
         </Col>
       </Row>
     </div>
