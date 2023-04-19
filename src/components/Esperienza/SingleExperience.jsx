@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Row, Col } from "react-bootstrap";
+
 import { PencilFill } from "react-bootstrap-icons";
 import "./Esperienze.css";
 import { useParams } from "react-router";
@@ -9,15 +9,7 @@ import Button from "react-bootstrap/Button";
 import { RiDeleteBin6Line } from "react-icons/ri";
 
 import { IoSend } from "react-icons/io5";
-const SingleExperience = ({
-  company,
-  id,
-  role,
-  area,
-  startDate,
-  endDate,
-  description,
-}) => {
+const SingleExperience = ({ company, id, role, area, startDate, endDate, description }) => {
   const [selectedExperience, setSelectedExperience] = useState(null);
 
   const [singleCompany, setSingleCompany] = useState("");
@@ -49,7 +41,7 @@ const SingleExperience = ({
       startDate: singleStartDate,
       endDate: singleEndDate || null,
       description: singleDescription,
-      area: singleArea,
+      area: singleArea
     };
 
     try {
@@ -61,8 +53,8 @@ const SingleExperience = ({
           headers: {
             "Content-Type": "application/json",
             Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDNmOWYxZTA4ZjNkNzAwMTRjM2U5ODciLCJpYXQiOjE2ODE4OTExMDMsImV4cCI6MTY4MzEwMDcwM30.T_dtXS4sdwETVn1QxaN0Er8czTLxIHXKZ40FnaiXnEI
-            `,
-          },
+            `
+          }
         }
       );
       if (response.ok) {
@@ -83,8 +75,8 @@ const SingleExperience = ({
         `https://striveschool-api.herokuapp.com/api/profile/61e68379c2c1880015ab949c/experiences/${selectedExperience}`,
         {
           headers: {
-            Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2RiOGMwYjUwMWZlODAwMTU2MGMyMGYiLCJpYXQiOjE2NzUzMzI2MjAsImV4cCI6MTY3NjU0MjIyMH0.UI1_iuYyUi7ZoMWiwO1QXHOyn0LxM91ju-bEf4_Nmo8`,
-          },
+            Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2RiOGMwYjUwMWZlODAwMTU2MGMyMGYiLCJpYXQiOjE2NzUzMzI2MjAsImV4cCI6MTY3NjU0MjIyMH0.UI1_iuYyUi7ZoMWiwO1QXHOyn0LxM91ju-bEf4_Nmo8`
+          }
         }
       );
       if (response.ok) {
@@ -110,8 +102,8 @@ const SingleExperience = ({
           method: "DELETE",
           headers: {
             Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDNmOWYxZTA4ZjNkNzAwMTRjM2U5ODciLCJpYXQiOjE2ODE4OTExMDMsImV4cCI6MTY4MzEwMDcwM30.T_dtXS4sdwETVn1QxaN0Er8czTLxIHXKZ40FnaiXnEI
-            `,
-          },
+            `
+          }
         }
       );
       if (response.ok) {
@@ -160,8 +152,7 @@ const SingleExperience = ({
             </p>
             <p className="  ">
               <strong>
-                <small>{description}</small>{" "}
-                <small className="text-muted"> ...guarda di più</small>
+                <small>{description}</small> <small className="text-muted"> ...guarda di più</small>
               </strong>
             </p>
           </div>
@@ -230,20 +221,11 @@ const SingleExperience = ({
 
             <Form.Group>
               <Form.Label>Data fine</Form.Label>
-              <Form.Control
-                type="date"
-                value={singleEndDate}
-                onChange={(e) => setSingleEndDate(e.target.value)}
-              />
+              <Form.Control type="date" value={singleEndDate} onChange={(e) => setSingleEndDate(e.target.value)} />
             </Form.Group>
 
             <div className="d-flex justify-content-end">
-              <Button
-                variant="danger"
-                type="button"
-                className="mr-4"
-                onClick={deleteExperience}
-              >
+              <Button variant="danger" type="button" className="mr-4" onClick={deleteExperience}>
                 <RiDeleteBin6Line size={26} />
               </Button>
               <Button variant="success" type="submit">
