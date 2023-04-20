@@ -6,7 +6,7 @@ import MyNav from "./components/myNav";
 import MyFooter from "./components/myFooter";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Jobs from "../src/components/Jobs/Jobs";
-import Company from "./components/Jobs/Company";
+import Company from "../src/components/Jobs/Company";
 import { Container, Row, Col, Form, Dropdown } from "react-bootstrap";
 import Profile from "./components/ProfilePage/Profile";
 
@@ -17,17 +17,19 @@ function App() {
     <div>
       <BrowserRouter>
         <MyNav />
-        <Route
-          path="/jobs"
-          element={
-            <Jobs userProfile={userProfile} setUserProfile={setUserProfile} />
-          }
-        />
+        <Routes>
+          <Route
+            path="/jobs"
+            element={
+              <Jobs userProfile={userProfile} setUserProfile={setUserProfile} />
+            }
+          />
+          <Route path="/company" element={<Company />} />
+          <Route path="/:profile" element={<Profile />} />
+          <Route path="/:footer" element={<MyFooter />} />
+        </Routes>
         <Container fluid="md">
-          <div className="App">
-            <Profile />
-          </div>
-          <MyFooter />
+          <div className="App">{/* Contenuto non correlato alle rotte */}</div>
         </Container>
       </BrowserRouter>
     </div>

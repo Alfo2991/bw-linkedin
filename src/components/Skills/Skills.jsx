@@ -13,35 +13,37 @@ const Skills = () => {
   const FrecciaGiu = () => <i class="bi bi-chevron-compact-up ml-1"></i>;
   const skillsList = [
     {
-      name: "HTML"
+      name: "HTML",
     },
     {
-      name: "CSS"
+      name: "CSS",
     },
     {
-      name: "Bootstrap"
+      name: "Bootstrap",
     },
     {
-      name: "TypeScript"
+      name: "TypeScript",
     },
     {
-      name: "React"
+      name: "React",
     },
     {
-      name: "Redux"
+      name: "Redux",
     },
     {
-      name: "Redux+React"
-    }
+      name: "Redux+React",
+    },
   ];
   return (
     <>
-      <Card id="skills" className="mb-2">
+      <Card id="skills" className="mb-2  ">
         <Card.Body className="pb-0">
-          <div className="d-flex flex-row gap-2">
-            <Card.Title>Competenze</Card.Title>
+          <div className="d-flex flex-row gap-2 justify-content-between ">
+            <Card.Title>Skills</Card.Title>
             <span className="d-flex flex-row ml-auto gap-2">
-              <Button className="px-3 py-1 mr-2 m-0 quizComp">Quiz valutazioni competenze</Button>
+              <Button className="px-3 py-1 mr-2 m-0 quizComp">
+                Quiz valutazioni competenze
+              </Button>
               <PlusLg size={26} className="mt-1 mr-4" />
               <PencilFill size={20} style={{ marginTop: ".5em" }} />
             </span>
@@ -61,8 +63,12 @@ const Skills = () => {
           </Card.Text>
 
           <Card.Footer className="text-center d-flex justify-content-center">
-            <Button className="btn-connect card-bottom  align-items-center" onClick={() => mostraDiPiu()}>
-              {contentToShow ? `Riduci` : "Mostra tutte le competenze"} {contentToShow ? FrecciaSu() : FrecciaGiu()}
+            <Button
+              className="btn-connect card-bottom  align-items-center"
+              onClick={() => mostraDiPiu()}
+            >
+              {contentToShow ? `Riduci` : "Mostra tutte le competenze"}{" "}
+              {contentToShow ? FrecciaSu() : FrecciaGiu()}
             </Button>
           </Card.Footer>
         </Card.Body>
