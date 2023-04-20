@@ -6,10 +6,10 @@ const Corsi = () => {
   return (
     <>
       <Card id="corsi" className="mb-2">
-        <Card.Body className="pb-0">
-          <div className="d-flex flex-row">
+        <Card.Body className="pb-0 ">
+          <div className="d-flex flex-row gap-2 justify-content-between">
             <Card.Title>Corsi</Card.Title>
-            <span className="d-flex flex-row ml-auto">
+            <span className="d-flex flex-row ml-auto gap-2">
               <PlusLg size={26} className="mt-1 mr-4" />
               <PencilFill size={20} style={{ marginTop: ".5em" }} />
             </span>

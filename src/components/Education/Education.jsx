@@ -7,14 +7,19 @@ const Education = () => {
     <Card
       className="px-2 mt-4 mb-2"
       style={{
-        borderRadius: "9px"
+        borderRadius: "9px",
       }}
     >
       <span className="d-flex flex-row">
         <h5 className="title__activity mb-4">Formazione</h5>
         <div className="d-flex mr-auto" style={{ marginLeft: "35em" }}>
           <PlusLg size={26} id="" className="mt-4 mr-4" />
-          <PencilFill size={20} id="" className="" style={{ marginTop: "1.7em" }} />
+          <PencilFill
+            size={20}
+            id=""
+            className=""
+            style={{ marginTop: "1.7em" }}
+          />
         </div>
       </span>
 
@@ -29,7 +34,7 @@ const Education = () => {
             />
           </div>
           <div className="col-md-4 jojo text-nowrap">
-            <h6>EPicode School </h6>
+            <h6>Epicode School </h6>
             <p>
               <small>Front-End Developer</small>
               <br />
@@ -65,7 +70,10 @@ const Education = () => {
           </div>
         </div>
       </div>
-      <Card.Footer className="d-flex justify-content-center text-muted" style={{ backgroundColor: "transparent" }}>
+      <Card.Footer
+        className="d-flex justify-content-center text-muted"
+        style={{ backgroundColor: "transparent" }}
+      >
         <Card.Text>Mostra tutti i titoli di studio (2)</Card.Text>
       </Card.Footer>
     </Card>

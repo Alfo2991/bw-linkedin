@@ -36,12 +36,12 @@ const Skills = () => {
   ];
   return (
     <>
-      <Card id="skills" className="mb-2">
+      <Card id="skills" className="mb-2  ">
         <Card.Body className="pb-0">
-          <div className="d-flex flex-row">
-            <Card.Title>Competenze</Card.Title>
-            <span className="d-flex flex-row ml-auto">
-              <Button className="px-3 py-1 mr-2 m-0">
+          <div className="d-flex flex-row gap-2 justify-content-between ">
+            <Card.Title>Skills</Card.Title>
+            <span className="d-flex flex-row ml-auto gap-2">
+              <Button className="px-3 py-1 mr-2 m-0 quizComp">
                 Quiz valutazioni competenze
               </Button>
               <PlusLg size={26} className="mt-1 mr-4" />

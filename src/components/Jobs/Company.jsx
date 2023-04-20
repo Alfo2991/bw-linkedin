@@ -20,9 +20,7 @@ const Company = () => {
       console.log(job);
       setPosition(job);
     } else {
-      console.log(
-        "Durante il tentativo di recupero dei dati, qualcosa è andato male"
-      );
+      console.log("Error #1!");
     }
   };
   return (
