@@ -137,12 +137,12 @@ body {
   line-height: 1.2;
 }
 .hoverable-link-text {
-  color: #6c757d; /* colore grigio normale */
+  color: #6c757d; 
   text-decoration: none;
 }
 
 .hoverable-link-text:hover {
-  color: #0073b1; /* colore blu al passaggio del mouse */
+  color: #0073b1; 
   text-decoration: underline;
 }
 .pvs-header__subtitle span:first-child {
@@ -159,7 +159,7 @@ body {
   text-decoration: none;
 }
 .discoverWho:hover {
-  color: #0073b1; /* colore blu al passaggio del mouse */
+  color: #0073b1; 
   text-decoration: underline;
 }
 .pvs-list__item--three-column {
