@@ -10,12 +10,12 @@ const Interessi = () => {
             <Card.Title>Interessi</Card.Title>
           </div>
 
-          <Card.Text className="d-flex flex-row mt-3 mb-0">
+          <Card.Text className="d-flex flex-row mt-3 mb-0 gap-2">
             <p className="mr-3">Aziende</p>
             <p>Scuole</p>
           </Card.Text>
-          <div className="d-flex flex-row  mt-2 border-bottom">
-            <div className="d-flex flex-row mr-5">
+          <div className="d-flex flex-row  mt-2 border-bottom gap-3">
+            <div className="d-flex flex-row mr-5 gap-2">
               <Image
                 src="https://imgs.search.brave.com/U84YLc_mSMDN5qtcWYa3cqu-pHaNDc6sumIHuBhojIo/rs:fit:632:225:1/g:ce/aHR0cHM6Ly90c2Uy/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5G/dHFxTTVtV2xWTzU0/SlBqRmxTMUd3SGFG/aiZwaWQ9QXBp"
                 alt="startup logo"
@@ -25,11 +25,8 @@ const Interessi = () => {
                 <p>2,514 followers</p>
               </span>
             </div>
-            <div className="d-flex flex-row ml-5">
-              <Image
-                src="https://strive.school/favicon.ico"
-                alt="startup logo"
-              />
+            <div className="d-flex flex-row ml-5 gap-2">
+              <Image src="https://strive.school/favicon.ico" alt="startup logo" />
               <span className="pl-3 d-flex flex-column justify-content-center">
                 <h6 className="mb-0">Strive School</h6>
                 <p>2,242 followers</p>
