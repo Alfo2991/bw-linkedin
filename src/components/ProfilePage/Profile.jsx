@@ -6,6 +6,9 @@ import { useParams } from "react-router";
 import Esperienze from "../Esperienza/Esperienze";
 import "./Profile.css";
 import ProfiloUtente from "../ProfilePage/ProfiloUtente";
+import Skills from "../Skills/Skills";
+import Corsi from "../Skills/Corsi";
+import Interessi from "../Skills/Interessi";
 
 const Profile = ({ userProfile, setUserProfile }) => {
   const params = useParams();
@@ -13,7 +16,7 @@ const Profile = ({ userProfile, setUserProfile }) => {
   useEffect(() => {}, [params]);
   return (
     <>
-      <Col className="home__wrap pr-5">
+      <Col className="profilepage pr-5">
         <ProfiloUtente
           userProfile={userProfile}
           setUserProfile={setUserProfile}
@@ -22,6 +25,9 @@ const Profile = ({ userProfile, setUserProfile }) => {
 
         <Esperienze userProfile={userProfile} setUserProfile={setUserProfile} />
         <Education />
+        <Skills />
+        <Corsi />
+        <Interessi />
       </Col>
     </>
   );
