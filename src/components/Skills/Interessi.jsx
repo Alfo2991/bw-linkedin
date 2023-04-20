@@ -1,5 +1,5 @@
 import { Card, Image } from "react-bootstrap";
-import "./Skillinteressi.css";
+import "./Skillsinteressi.css";
 
 const Interessi = () => {
   return (
