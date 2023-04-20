@@ -9,7 +9,15 @@ import Button from "react-bootstrap/Button";
 import { RiDeleteBin6Line } from "react-icons/ri";
 
 import { IoSend } from "react-icons/io5";
-const SingleExperience = ({ company, id, role, area, startDate, endDate, description }) => {
+const SingleExperience = ({
+  company,
+  id,
+  role,
+  area,
+  startDate,
+  endDate,
+  description,
+}) => {
   const [selectedExperience, setSelectedExperience] = useState(null);
 
   const [singleCompany, setSingleCompany] = useState("");
@@ -41,7 +49,7 @@ const SingleExperience = ({ company, id, role, area, startDate, endDate, descrip
       startDate: singleStartDate,
       endDate: singleEndDate || null,
       description: singleDescription,
-      area: singleArea
+      area: singleArea,
     };
 
     try {
@@ -53,8 +61,8 @@ const SingleExperience = ({ company, id, role, area, startDate, endDate, descrip
           headers: {
             "Content-Type": "application/json",
             Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDNmOWYxZTA4ZjNkNzAwMTRjM2U5ODciLCJpYXQiOjE2ODE4OTExMDMsImV4cCI6MTY4MzEwMDcwM30.T_dtXS4sdwETVn1QxaN0Er8czTLxIHXKZ40FnaiXnEI
-            `
-          }
+            `,
+          },
         }
       );
       if (response.ok) {
@@ -62,7 +70,7 @@ const SingleExperience = ({ company, id, role, area, startDate, endDate, descrip
         setExperiences(data);
         closeEditExperience();
       } else {
-        console.error("fetch failed");
+        console.error("Error #1!");
       }
     } catch (error) {
       console.error(error);
@@ -75,8 +83,9 @@ const SingleExperience = ({ company, id, role, area, startDate, endDate, descrip
         `https://striveschool-api.herokuapp.com/api/profile/61e68379c2c1880015ab949c/experiences/${selectedExperience}`,
         {
           headers: {
-            Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2RiOGMwYjUwMWZlODAwMTU2MGMyMGYiLCJpYXQiOjE2NzUzMzI2MjAsImV4cCI6MTY3NjU0MjIyMH0.UI1_iuYyUi7ZoMWiwO1QXHOyn0LxM91ju-bEf4_Nmo8`
-          }
+            Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDNmOWYxZTA4ZjNkNzAwMTRjM2U5ODciLCJpYXQiOjE2ODE4OTExMDMsImV4cCI6MTY4MzEwMDcwM30.T_dtXS4sdwETVn1QxaN0Er8czTLxIHXKZ40FnaiXnEI
+            `,
+          },
         }
       );
       if (response.ok) {
@@ -88,7 +97,7 @@ const SingleExperience = ({ company, id, role, area, startDate, endDate, descrip
         setSingleStartDate(data.startDate);
         setSingleEndDate(data.endDate);
       } else {
-        console.log("Fetch Failed");
+        console.log("Error #2!");
       }
     } catch (error) {
       console.error(error);
@@ -102,14 +111,14 @@ const SingleExperience = ({ company, id, role, area, startDate, endDate, descrip
           method: "DELETE",
           headers: {
             Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDNmOWYxZTA4ZjNkNzAwMTRjM2U5ODciLCJpYXQiOjE2ODE4OTExMDMsImV4cCI6MTY4MzEwMDcwM30.T_dtXS4sdwETVn1QxaN0Er8czTLxIHXKZ40FnaiXnEI
-            `
-          }
+            `,
+          },
         }
       );
       if (response.ok) {
         closeEditExperience();
       } else {
-        console.error("fetch failed");
+        console.error("Error #3!");
       }
     } catch (error) {
       console.error(error);
@@ -152,7 +161,8 @@ const SingleExperience = ({ company, id, role, area, startDate, endDate, descrip
             </p>
             <p className="  ">
               <strong>
-                <small>{description}</small> <small className="text-muted"> ...guarda di più</small>
+                <small>{description}</small>{" "}
+                <small className="text-muted"> ...guarda di più</small>
               </strong>
             </p>
           </div>
@@ -221,11 +231,20 @@ const SingleExperience = ({ company, id, role, area, startDate, endDate, descrip
 
             <Form.Group>
               <Form.Label>Data fine</Form.Label>
-              <Form.Control type="date" value={singleEndDate} onChange={(e) => setSingleEndDate(e.target.value)} />
+              <Form.Control
+                type="date"
+                value={singleEndDate}
+                onChange={(e) => setSingleEndDate(e.target.value)}
+              />
             </Form.Group>
 
             <div className="d-flex justify-content-end">
-              <Button variant="danger" type="button" className="mr-4" onClick={deleteExperience}>
+              <Button
+                variant="danger"
+                type="button"
+                className="mr-4"
+                onClick={deleteExperience}
+              >
                 <RiDeleteBin6Line size={26} />
               </Button>
               <Button variant="success" type="submit">
