@@ -1,0 +1,97 @@
+#skills .card-title,
+#corsi .card-title,
+#interessi .card-title {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+#skills button {
+  border-radius: 25px;
+  border-color: #0a66c2;
+  color: #0a66c2;
+  font-weight: bold;
+  background-color: transparent;
+  font-size: 0.8rem;
+}
+#skills .title,
+#corsi .title {
+  color: #696969;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+#skills .title:hover,
+#corsi .title:hover {
+  cursor: pointer;
+  background-color: #9b9b9b2c;
+  border-radius: 5px;
+}
+#skills i,
+#corsi i {
+  color: rgb(46, 46, 46);
+  font-size: 1rem;
+}
+
+#skills .card-text > p,
+#corsi .card-text > p {
+  font-weight: bold;
+  font-size: 0.8rem;
+  color: #727272;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #e0dfdf;
+}
+
+#interessi .card-text,
+#interessi .border-bottom {
+  border-bottom: 1px solid #e0dfdf;
+}
+
+#interessi .card-text > p:first-child {
+  color: green;
+}
+
+#skills .card-footer,
+#interessi .card-footer {
+  background: none;
+  border-top: none;
+}
+
+#skills .card-footer p,
+#interessi .card-footer p {
+  color: #727272;
+}
+
+#interessi img {
+  width: 48px;
+  height: 48px;
+}
+
+#interessi span > p {
+  color: #727272;
+  font-size: 0.9rem;
+}
+
+#interessi .card-text > p {
+  font-weight: bold;
+  font-size: 0.8rem;
+  color: #727272;
+  padding-bottom: 0px;
+}
+
+#corsi .card-text > p:last-of-type {
+  border: none;
+}
+
+#skills button:hover {
+  cursor: pointer;
+  background-color: #0a66c231;
+  border: 2px solid;
+}
+#skills i:hover,
+#corsi i:hover {
+  cursor: pointer;
+  background-color: #9b9b9b2c;
+  border-radius: 100%;
+  padding-left: 12px !important;
+  padding-right: 12px !important;
+}

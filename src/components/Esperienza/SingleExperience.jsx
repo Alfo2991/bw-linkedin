@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Row, Col } from "react-bootstrap";
+
 import { PencilFill } from "react-bootstrap-icons";
 import "./Esperienze.css";
 import { useParams } from "react-router";
@@ -70,7 +70,7 @@ const SingleExperience = ({
         setExperiences(data);
         closeEditExperience();
       } else {
-        console.error("fetch failed");
+        console.error("Error #1!");
       }
     } catch (error) {
       console.error(error);
@@ -83,7 +83,8 @@ const SingleExperience = ({
         `https://striveschool-api.herokuapp.com/api/profile/61e68379c2c1880015ab949c/experiences/${selectedExperience}`,
         {
           headers: {
-            Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2RiOGMwYjUwMWZlODAwMTU2MGMyMGYiLCJpYXQiOjE2NzUzMzI2MjAsImV4cCI6MTY3NjU0MjIyMH0.UI1_iuYyUi7ZoMWiwO1QXHOyn0LxM91ju-bEf4_Nmo8`,
+            Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDNmOWYxZTA4ZjNkNzAwMTRjM2U5ODciLCJpYXQiOjE2ODE4OTExMDMsImV4cCI6MTY4MzEwMDcwM30.T_dtXS4sdwETVn1QxaN0Er8czTLxIHXKZ40FnaiXnEI
+            `,
           },
         }
       );
@@ -96,7 +97,7 @@ const SingleExperience = ({
         setSingleStartDate(data.startDate);
         setSingleEndDate(data.endDate);
       } else {
-        console.log("Fetch Failed");
+        console.log("Error #2!");
       }
     } catch (error) {
       console.error(error);
@@ -117,7 +118,7 @@ const SingleExperience = ({
       if (response.ok) {
         closeEditExperience();
       } else {
-        console.error("fetch failed");
+        console.error("Error #3!");
       }
     } catch (error) {
       console.error(error);
