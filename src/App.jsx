@@ -24,10 +24,10 @@ function App() {
             element={<Jobs userID={userID} setuserID={setuserID} />}
           />
           <Route path="/company" element={<Company />} />
-          <Route path="/:Home" element={<Home />} />
-          <Route path="/:profile" element={<Profile />} />
-          <Route path="/:footer" element={<MyFooter />} />
+          <Route path="/Home" element={<Home />} />
+          <Route path="/profile" element={<Profile />} />
         </Routes>
+
         <Container fluid="md">
           <div className="App">{/* Contenuto non correlato alle rotte */}</div>
         </Container>

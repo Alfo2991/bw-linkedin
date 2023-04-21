@@ -1,6 +1,3 @@
-import { Link } from "react-router-dom";
-import ProfiloUtente from "../ProfilePage/ProfiloUtente";
-import Sidebar from "../Sidebar/Sidebar";
 import "../Sidebar/Sidebar.css";
 import { useState } from "react";
 import { Col } from "react-bootstrap";
