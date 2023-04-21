@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
 import MyFooter from "../myFooter";
 import Profile from "../ProfilePage/Profile";
-const Home = ({ userProfile, setUserProfile }) => {
+
+const Home = ({ userID, setuserID }) => {
   return (
     <>
-      <Profile userProfile={userProfile} setUserProfile={setUserProfile} />
+      <Profile userID={userID} setuserID={setuserID} />
       <div id="sidebar" className="pl-5 ml-5 mt-4"></div>
       <MyFooter />
     </>
