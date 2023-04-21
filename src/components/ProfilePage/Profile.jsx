@@ -9,7 +9,7 @@ import Skills from "../Skills/Skills";
 import Corsi from "../Skills/Corsi";
 import Interessi from "../Skills/Interessi";
 import Sidebar from "../mySideBar";
-import Footer from "../myFooter";
+import myFooter from "../myFooter";
 import "./Profile.css";
 import "./ProfileModal.css";
 
@@ -37,7 +37,7 @@ const Profile = ({ userID, setuserID }) => {
           <Sidebar />
         </div>
       </Container>
-      <Footer />
+      <myFooter />
     </>
   );
 };
