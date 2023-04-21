@@ -1,7 +1,5 @@
-import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
-import { Col, Form, FormControl } from "react-bootstrap";
-import Card from "react-bootstrap/Card";
+import { Col } from "react-bootstrap";
 import { useEffect, useState } from "react";
 import MessageMiddle from "./MessageMiddle";
 

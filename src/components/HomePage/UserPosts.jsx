@@ -8,8 +8,8 @@ const UserPosts = ({ postsAdded }) => {
   const [numOfPosts, setNumOfPosts] = useState(20);
 
   const [postsChanged, setPostsChanged] = useState(0);
-  const [selectedPost, setSelectedPost] = useState(null);
-  const [selectedPostDetails, setSelectedPostDetails] = useState(null);
+  const [postId, setpostId] = useState(null);
+  const [postIdDetails, setpostIdDetails] = useState(null);
   const [showModal, setShowModal] = useState(false);
   const handleCloseModal = () => setShowModal(false);
   const handleShowModal = () => setShowModal(true);
@@ -17,7 +17,7 @@ const UserPosts = ({ postsAdded }) => {
   const fetchPostDetails = async () => {
     try {
       const response = await fetch(
-        `https://striveschool-api.herokuapp.com/api/posts/${selectedPost}`,
+        `https://striveschool-api.herokuapp.com/api/posts/${postId}`,
         {
           headers: {
             Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDNmOWYxZTA4ZjNkNzAwMTRjM2U5ODciLCJpYXQiOjE2ODE4OTExMDMsImV4cCI6MTY4MzEwMDcwM30.T_dtXS4sdwETVn1QxaN0Er8czTLxIHXKZ40FnaiXnEI`,
@@ -26,7 +26,7 @@ const UserPosts = ({ postsAdded }) => {
       );
       if (response.ok) {
         const data = await response.json();
-        setSelectedPostDetails(data);
+        setpostIdDetails(data);
       } else {
         console.error("Fetch Failed");
       }
@@ -37,17 +37,17 @@ const UserPosts = ({ postsAdded }) => {
 
   useEffect(() => {
     fetchPostDetails();
-  }, [selectedPost]);
+  }, [postId]);
 
   const handleEdit = (id) => {
-    setSelectedPost(id);
+    setpostId(id);
     handleShowModal();
   };
 
   const handleDeletePost = async () => {
     try {
       const response = await fetch(
-        `https://striveschool-api.herokuapp.com/api/posts/${selectedPost}`,
+        `https://striveschool-api.herokuapp.com/api/posts/${postId}`,
         {
           method: "DELETE",
           headers: {
@@ -68,11 +68,11 @@ const UserPosts = ({ postsAdded }) => {
   const handleUpdatePost = async () => {
     try {
       const response = await fetch(
-        `https://striveschool-api.herokuapp.com/api/posts/${selectedPost}`,
+        `https://striveschool-api.herokuapp.com/api/posts/${postId}`,
         {
           method: "PUT",
           body: JSON.stringify({
-            text: selectedPostDetails.text,
+            text: postIdDetails.text,
           }),
           headers: {
             "Content-Type": "application/json",
@@ -124,7 +124,7 @@ const UserPosts = ({ postsAdded }) => {
 
       <Modal show={showModal} onHide={handleCloseModal}>
         <Modal.Header closeButton>
-          <Modal.Title>{selectedPostDetails?.username}</Modal.Title>
+          <Modal.Title>{postIdDetails?.username}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <Form>
@@ -132,10 +132,10 @@ const UserPosts = ({ postsAdded }) => {
               as="textarea"
               className="border-0"
               rows={3}
-              value={selectedPostDetails?.text}
+              value={postIdDetails?.text}
               onChange={(e) =>
-                setSelectedPostDetails({
-                  ...selectedPostDetails,
+                postIdDetails({
+                  ...postIdDetails,
                   text: e.target.value,
                 })
               }

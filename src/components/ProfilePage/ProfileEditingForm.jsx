@@ -65,7 +65,7 @@ const ProfileEditForm = ({ profileDetails }) => {
     }
   };
 
-  const putProfile = async (profileID, data) => {
+  const putProfile = async (userId, data) => {
     try {
       const response = await fetch(
         `https://striveschool-api.herokuapp.com/api/profile/`,
@@ -92,10 +92,10 @@ const ProfileEditForm = ({ profileDetails }) => {
     }
   };
 
-  const postProfileImage = async (profileID, formData) => {
+  const postProfileImage = async (userId, formData) => {
     try {
       const response = await fetch(
-        `https://striveschool-api.herokuapp.com/api/profile/${profileID}/picture`,
+        ` https://striveschool-api.herokuapp.com/api/profile/${userId}/picture`,
         {
           headers: {
             Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDNmOWYxZTA4ZjNkNzAwMTRjM2U5ODciLCJpYXQiOjE2ODE4OTExMDMsImV4cCI6MTY4MzEwMDcwM30.T_dtXS4sdwETVn1QxaN0Er8czTLxIHXKZ40FnaiXnEI`,

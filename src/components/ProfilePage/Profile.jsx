@@ -30,7 +30,6 @@ const Profile = ({ userID, setuserID }) => {
             <Skills />
             <Corsi />
             <Interessi />
-            <Esperienze />
           </Col>
         </div>
         <div>

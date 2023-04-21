@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-
 import { PencilFill } from "react-bootstrap-icons";
 import "./Esperienze.css";
 import { useParams } from "react-router";
@@ -7,7 +6,6 @@ import Modal from "react-bootstrap/Modal";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import { RiDeleteBin6Line } from "react-icons/ri";
-
 import { IoSend } from "react-icons/io5";
 const SingleExperience = ({
   company,
@@ -18,7 +16,7 @@ const SingleExperience = ({
   endDate,
   description,
 }) => {
-  const [selectedExperience, setSelectedExperience] = useState(null);
+  const [expId, setexpId] = useState(null);
 
   const [singleCompany, setSingleCompany] = useState("");
   const [singleRole, setSingleRole] = useState("");
@@ -54,7 +52,7 @@ const SingleExperience = ({
 
     try {
       const response = await fetch(
-        `https://striveschool-api.herokuapp.com/api/profile/61e68379c2c1880015ab949c/experiences/${selectedExperience}`,
+        `https://striveschool-api.herokuapp.com/api/profile/:userId/experiences/${expId}`,
         {
           method: "PUT",
           body: JSON.stringify(experience),
@@ -80,7 +78,7 @@ const SingleExperience = ({
     setEditExperience(true);
     try {
       const response = await fetch(
-        `https://striveschool-api.herokuapp.com/api/profile/61e68379c2c1880015ab949c/experiences/${selectedExperience}`,
+        `https://striveschool-api.herokuapp.com/api/profile/:userId/experiences/${expId}`,
         {
           headers: {
             Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDNmOWYxZTA4ZjNkNzAwMTRjM2U5ODciLCJpYXQiOjE2ODE4OTExMDMsImV4cCI6MTY4MzEwMDcwM30.T_dtXS4sdwETVn1QxaN0Er8czTLxIHXKZ40FnaiXnEI
@@ -106,7 +104,7 @@ const SingleExperience = ({
   const deleteExperience = async () => {
     try {
       const response = await fetch(
-        `https://striveschool-api.herokuapp.com/api/profile/5d925e677360c41e0046d1f5/experiences/${selectedExperience}`,
+        `https://striveschool-api.herokuapp.com/api/profile/:userId/experiences/${expId}`,
         {
           method: "DELETE",
           headers: {
@@ -134,7 +132,7 @@ const SingleExperience = ({
             id="pencil-icon-open-edit-form"
             onClick={() => {
               showEditExperience();
-              setSelectedExperience(id);
+              setexpId(id);
             }}
           />
         </div>
