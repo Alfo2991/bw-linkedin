@@ -9,6 +9,7 @@ import Jobs from "../src/components/Jobs/Jobs";
 import Company from "../src/components/Jobs/Company";
 import { Container, Row, Col, Form, Dropdown } from "react-bootstrap";
 import Profile from "./components/ProfilePage/Profile";
+import Home from "./components/HomePage/Home";
 
 function App() {
   const [userProfile, setUserProfile] = useState({});
@@ -18,8 +19,14 @@ function App() {
       <BrowserRouter>
         <MyNav />
         <Routes>
-          <Route path="/jobs" element={<Jobs userProfile={userProfile} setUserProfile={setUserProfile} />} />
+          <Route
+            path="/jobs"
+            element={
+              <Jobs userProfile={userProfile} setUserProfile={setUserProfile} />
+            }
+          />
           <Route path="/company" element={<Company />} />
+          <Route path="/:home" element={<Home />} />
           <Route path="/:profile" element={<Profile />} />
           <Route path="/:footer" element={<MyFooter />} />
         </Routes>
