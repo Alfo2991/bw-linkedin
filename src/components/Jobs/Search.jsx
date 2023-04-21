@@ -11,7 +11,7 @@ const Search = () => {
   const fetchSearch = async (e) => {
     e.preventDefault();
     const response = await fetch(
-      "https://strive-jobs-api.herokuapp.com/jobs?search=" +
+      "https://strive-benchmark.herokuapp.com/api/jobs?search=" +
         searchQuery +
         "&limit=10"
     );
@@ -19,7 +19,7 @@ const Search = () => {
       const res = await response.json();
       setJob(res.data);
     } else {
-      alert("Si è verificato un errore durante la Fetch");
+      alert("Error #1");
     }
   };
   return (

@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react";
 import "../FeaturedPosts/FeaturedPosts";
-import SingleFeed from "./SingleFeed";
+import SingleNews from "./SingleNews";
 import "../Sidebar/Sidebar.css";
 import "./Home.css";
 import SinglePost from "./SinglePost";
 import { Col, Container, Row } from "react-bootstrap";
 import RightSidebar from "./HomeRightSidebar/RightSidebar";
 
-const NewsFeed = ({ userProfile, setUserProfile }) => {
+const NewsFeed = ({ userID, setuserID }) => {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
@@ -26,11 +26,11 @@ const NewsFeed = ({ userProfile, setUserProfile }) => {
       );
       if (response.ok) {
         let responseJson = await response.json();
-        console.log("POSTS", responseJson);
+        console.log("NEWSFEED:", responseJson);
         setPosts(responseJson);
         return posts;
       } else {
-        console.log("Errore durante il recupero dei dati");
+        console.log("Error #1");
       }
     } catch (error) {
       console.log(error);
@@ -43,7 +43,7 @@ const NewsFeed = ({ userProfile, setUserProfile }) => {
         .filter((post) => post.user)
         .slice(0, 6)
         .map((post) => (
-          <SingleFeed
+          <SingleNews
             image={post.user.image}
             name={post.user.name}
             surname={post.user.surname}

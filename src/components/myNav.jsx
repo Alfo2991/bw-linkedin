@@ -17,7 +17,12 @@ function MyNav() {
           <div size={30} className="d-flex align-items-center ml-4 search-me ">
             {/* <Icon.Search size={15} className="mx-3" /> */}
             <Form className="d-flex searchBox">
-              <Form.Control type="search" placeholder="🔍 Cerca" className="me-2 py-0 input2" aria-label="Search" />
+              <Form.Control
+                type="search"
+                placeholder="🔍 Cerca"
+                className="me-2 py-0 input2"
+                aria-label="Search"
+              />
             </Form>
           </div>
 
@@ -26,21 +31,23 @@ function MyNav() {
           <Nav className="me-auto icons">
             {/* Home */}
             <div className="icons">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                data-supported-dps="24x24"
-                fill="currentColor"
-                class="mercado-match house"
-                width="24"
-                height="24"
-                focusable="false"
-              >
-                <path d="M23 9v2h-2v7a3 3 0 01-3 3h-4v-6h-4v6H6a3 3 0 01-3-3v-7H1V9l11-7 5 3.18V2h3v5.09z"></path>
-              </svg>
-              <Nav.Link href="#home" className="text1 text2">
-                Home
-              </Nav.Link>
+              <Link to={"/Home"}>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  data-supported-dps="24x24"
+                  fill="currentColor"
+                  className="mercado-match house"
+                  width="24"
+                  height="24"
+                  focusable="false"
+                >
+                  <path d="M23 9v2h-2v7a3 3 0 01-3 3h-4v-6h-4v6H6a3 3 0 01-3-3v-7H1V9l11-7 5 3.18V2h3v5.09z"></path>
+                </svg>
+                <Nav.Link href="#home" className="text1 text2">
+                  Home
+                </Nav.Link>
+              </Link>
             </div>
 
             {/* Rete */}

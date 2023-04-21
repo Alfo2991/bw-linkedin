@@ -23,7 +23,7 @@ const MessageMain = () => {
         setProfiles(data);
         console.log(data);
       } else {
-        console.log("Qualcosa è andato storto durante il recupero dei dati");
+        console.log("Error #1");
       }
     } catch (err) {
       console.log("Errore durante la connessione al server");
@@ -41,8 +41,8 @@ const MessageMain = () => {
           <p className=" pl-3 ">Messaggi </p>
         </Col>
         <Col xs="4" className="d-flex align-items-center ">
-          <i class="bi bi-three-dots"></i>
-          <i class="bi bi-pencil-square"></i>
+          <i className="bi bi-three-dots"></i>
+          <i className="bi bi-pencil-square"></i>
         </Col>
       </Row>
       <Row>

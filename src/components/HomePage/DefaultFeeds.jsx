@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import UsereProfile from "../Profile/UsereProfile";
+import ProfiloUtente from "../ProfilePage/ProfiloUtente";
 import Sidebar from "../Sidebar/Sidebar";
 import "../Sidebar/Sidebar.css";
 import { useState } from "react";
@@ -9,22 +9,19 @@ import StartAPost from "../FeaturedPosts/StartAPost";
 import UserPosts from "./UserPosts";
 import RightSidebar from "./HomeRightSidebar/RightSidebar";
 import HomeLeftSidebar from "../FeaturedPosts/HomeLeftSidebar";
-const DefaultFeeds = ({ userProfile, setUserProfile }) => {
+const DefaultFeeds = ({ userID, setuserID }) => {
   const [postsAdded, setPostsAdded] = useState(0);
 
   return (
     <>
       <Col md={3} style={{ marginTop: "22px", marginLeft: "70px" }}>
-        <HomeLeftSidebar
-          userProfile={userProfile}
-          setUserProfile={setUserProfile}
-        />
+        <HomeLeftSidebar userID={userID} setuserID={setuserID} />
       </Col>
       <Col className="home__wrap pr-5" style={{ marginTop: "-701px" }}>
         <StartAPost />
 
         <UserPosts postsAdded={postsAdded} />
-        <NewsFeed userProfile={userProfile} setUserProfile={setUserProfile} />
+        <NewsFeed userID={userID} setuserID={setuserID} />
       </Col>
       <Col md={3} id="sidebar" className="" style={{ marginTop: "25px" }}>
         <RightSidebar />

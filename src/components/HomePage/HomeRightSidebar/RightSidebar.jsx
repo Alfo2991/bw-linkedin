@@ -17,18 +17,18 @@ const RightSidebar = () => {
         <Card.Body id="follow" className="px-1">
           <div className="d-flex flex-row">
             <Image
-              src="./images/huawei.jpg"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT94cOdOL6o0f2LYw8hh8diLEpvPffgsDFxNVUuEKwq1i6-RRaI7ZbraYo1iEe1nQpaemM&usqp=CAU"
               alt="samsung logo"
               className="mr-2"
             />
             <span>
-              <h6 className="mb-0">Huawei</h6>
-              <p>Company · Telecomunications</p>
+              <h6 className="mb-0">Samsung</h6>
+              <p>Company · Telecomunications & Technologies</p>
               <Button
                 type="button"
-                class="btn-connect btn btn-primary px-2 py-1"
+                className="btn-connect btn btn-primary px-2 py-1"
               >
-                <i class="bi bi-plus"></i> Segui
+                <i className="bi bi-plus"></i> Segui
               </Button>
             </span>
           </div>
@@ -39,30 +39,30 @@ const RightSidebar = () => {
               className="mr-2"
             />
             <span>
-              <h6 className="mb-0">Natalia Gutiérrez Botero</h6>
-              <p>UI-UX Designer, Art Director per...</p>
+              <h6 className="mb-0">Stefania E</h6>
+              <p>Archivista</p>
               <Button
                 type="button"
-                class="btn-connect btn btn-primary px-2 py-1"
+                className="btn-connect btn btn-primary px-2 py-1"
               >
-                <i class="bi bi-plus"></i> Segui
+                <i className="bi bi-plus"></i> Segui
               </Button>
             </span>
           </div>
           <div className="d-flex flex-row">
             <Image
-              src="./images/samsung.png"
+              src="https://www.mediakey.tv/fileadmin/user_upload/EPICODE.png"
               alt="samsung logo"
               className="mr-2"
             />
             <span>
-              <h6 className="mb-0">Samsung Electronics</h6>
-              <p>Company · Consumer Electronics</p>
+              <h6 className="mb-0">Epicode</h6>
+              <p>Company · Developing - Coding </p>
               <Button
                 type="button"
-                class="btn-connect btn btn-primary px-2 py-1"
+                className="btn-connect btn btn-primary px-2 py-1"
               >
-                <i class="bi bi-plus"></i> Segui
+                <i className="bi bi-plus"></i> Segui
               </Button>
             </span>
           </div>
@@ -71,14 +71,14 @@ const RightSidebar = () => {
           <p>
             {" "}
             Persone che potresti conoscere{" "}
-            <i class="bi bi-arrow-right ml-2"></i>
+            <i className="bi bi-arrow-right ml-2"></i>
           </p>
         </Card.Footer>
       </Card>
       <Card id="right-sidebar" className="mt-2">
         <Card.Img
           variant="top"
-          src="./images/linkedin.jpg"
+          src="https://media.licdn.com/media/AAYQAgTPAAgAAQAAAAAAADVuOvKzTF-3RD6j-qFPqhubBQ.png"
           alt="linkedin adv"
         />
       </Card>
@@ -119,7 +119,7 @@ const RightSidebar = () => {
           <Col xs={12} className="d-flex flex-row mt-3 justify-content-center">
             <Image
               id="linkedin-logo"
-              src="../images/promoted/linkedinADS.png"
+              src="https://1000marche.net/wp-content/uploads/2020/03/LinkedIn-Logo-1.png"
               alt="linkedin logo"
               className="mr-2"
             />
