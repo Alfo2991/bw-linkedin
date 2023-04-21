@@ -13,7 +13,7 @@ import Footer from "../myFooter";
 import "./Profile.css";
 import "./ProfileModal.css";
 
-const Profile = ({ userProfile, setUserProfile }) => {
+const Profile = ({ userID, setuserID }) => {
   const params = useParams();
 
   useEffect(() => {}, [params]);
@@ -22,16 +22,10 @@ const Profile = ({ userProfile, setUserProfile }) => {
       <Container className=" d-flex justify-content-between">
         <div>
           <Col className="profilepage pr-5">
-            <ProfiloUtente
-              userProfile={userProfile}
-              setUserProfile={setUserProfile}
-            />
+            <ProfiloUtente userID={userID} setuserID={setuserID} />
             <Attivita />
 
-            <Esperienze
-              userProfile={userProfile}
-              setUserProfile={setUserProfile}
-            />
+            <Esperienze userID={userID} setuserIDe={setuserID} />
             <Education />
             <Skills />
             <Corsi />

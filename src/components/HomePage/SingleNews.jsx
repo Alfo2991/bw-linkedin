@@ -1,6 +1,6 @@
-import { Card, Image, Row, Container } from "react-bootstrap";
+import { Card, Image } from "react-bootstrap";
 
-const SingleFeed = (props) => {
+const SingleNews = (props) => {
   return (
     <>
       <Card
@@ -25,4 +25,4 @@ const SingleFeed = (props) => {
     </>
   );
 };
-export default SingleFeed;
+export default SingleNews;

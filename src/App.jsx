@@ -12,7 +12,7 @@ import Profile from "./components/ProfilePage/Profile";
 import Home from "./components/HomePage/Home";
 
 function App() {
-  const [userProfile, setUserProfile] = useState({});
+  const [userID, setuserID] = useState({});
 
   return (
     <div>
@@ -20,13 +20,11 @@ function App() {
         <MyNav />
         <Routes>
           <Route
-            path="/jobs"
-            element={
-              <Jobs userProfile={userProfile} setUserProfile={setUserProfile} />
-            }
+            path="/Jobs"
+            element={<Jobs userID={userID} setuserID={setuserID} />}
           />
           <Route path="/company" element={<Company />} />
-          <Route path="/:home" element={<Home />} />
+          <Route path="/:Home" element={<Home />} />
           <Route path="/:profile" element={<Profile />} />
           <Route path="/:footer" element={<MyFooter />} />
         </Routes>

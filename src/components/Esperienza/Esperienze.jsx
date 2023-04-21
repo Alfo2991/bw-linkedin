@@ -19,7 +19,7 @@ const Esperienze = () => {
     startDate: "",
     endDate: "" || null,
     description: "",
-    area: ""
+    area: "",
   });
   const params = useParams();
 
@@ -31,7 +31,7 @@ const Esperienze = () => {
   const sendEsperienza = async (e) => {
     e.preventDefault();
     const exp = {
-      ...esperienza
+      ...esperienza,
     };
     try {
       const response = await fetch(
@@ -42,8 +42,8 @@ const Esperienze = () => {
           headers: {
             "Content-Type": "application/json",
             Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDNmOWYxZTA4ZjNkNzAwMTRjM2U5ODciLCJpYXQiOjE2ODE4OTExMDMsImV4cCI6MTY4MzEwMDcwM30.T_dtXS4sdwETVn1QxaN0Er8czTLxIHXKZ40FnaiXnEI
-            `
-          }
+            `,
+          },
         }
       );
       if (response.ok) {
@@ -62,14 +62,17 @@ const Esperienze = () => {
 
   const getEsperienze = async (profileID) => {
     try {
-      const response = await fetch(`https://striveschool-api.herokuapp.com/api/profile/${profileID}/experiences/`, {
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-          Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDNmOWYxZTA4ZjNkNzAwMTRjM2U5ODciLCJpYXQiOjE2ODE4OTExMDMsImV4cCI6MTY4MzEwMDcwM30.T_dtXS4sdwETVn1QxaN0Er8czTLxIHXKZ40FnaiXnEI
-            `
+      const response = await fetch(
+        `https://striveschool-api.herokuapp.com/api/profile/${profileID}/experiences/`,
+        {
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+            Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDNmOWYxZTA4ZjNkNzAwMTRjM2U5ODciLCJpYXQiOjE2ODE4OTExMDMsImV4cCI6MTY4MzEwMDcwM30.T_dtXS4sdwETVn1QxaN0Er8czTLxIHXKZ40FnaiXnEI
+            `,
+          },
         }
-      });
+      );
       console.log(response);
       if (response.ok) {
         const experiences = await response.json();
@@ -101,32 +104,47 @@ const Esperienze = () => {
           <Card
             className="px-2 mt-4 mb-2"
             style={{
-              borderRadius: "9px"
+              borderRadius: "9px",
             }}
           >
             <span className="d-flex flex-row mb-3">
               <h5 className="title__activity mb-4">Esperienza</h5>
               <div className="d-flex mr-auto" style={{ marginLeft: "35em" }}>
-                <PlusLg size={26} id="" className="mt-4 mr-4" onClick={showAddEsperienza} />
+                <PlusLg
+                  size={26}
+                  id=""
+                  className="mt-4 mr-4"
+                  onClick={showAddEsperienza}
+                />
               </div>
             </span>
 
-            {experiences.map(({ company, _id: id, role, area, startDate, endDate, description }) => (
-              <>
-                <div className="">
-                  <SingleExperience
-                    key={id}
-                    company={company}
-                    id={id}
-                    role={role}
-                    area={area}
-                    description={description}
-                    startDate={startDate}
-                    endDate={endDate}
-                  />
-                </div>
-              </>
-            ))}
+            {experiences.map(
+              ({
+                company,
+                _id: id,
+                role,
+                area,
+                startDate,
+                endDate,
+                description,
+              }) => (
+                <>
+                  <div className="">
+                    <SingleExperience
+                      key={id}
+                      company={company}
+                      id={id}
+                      role={role}
+                      area={area}
+                      description={description}
+                      startDate={startDate}
+                      endDate={endDate}
+                    />
+                  </div>
+                </>
+              )
+            )}
           </Card>
           <Modal show={addEsperienza} onHide={closeAddEsperienza}>
             <Modal.Header closeButton>
@@ -144,7 +162,7 @@ const Esperienze = () => {
                     onChange={(e) =>
                       setEsperienza({
                         ...esperienza,
-                        company: e.target.value
+                        company: e.target.value,
                       })
                     }
                   />
@@ -159,7 +177,7 @@ const Esperienze = () => {
                     onChange={(e) =>
                       setEsperienza({
                         ...esperienza,
-                        role: e.target.value
+                        role: e.target.value,
                       })
                     }
                   />
@@ -174,7 +192,7 @@ const Esperienze = () => {
                     onChange={(e) =>
                       setEsperienza({
                         ...esperienza,
-                        description: e.target.value
+                        description: e.target.value,
                       })
                     }
                   />
@@ -190,7 +208,7 @@ const Esperienze = () => {
                     onChange={(e) =>
                       setEsperienza({
                         ...esperienza,
-                        location: e.target.value
+                        location: e.target.value,
                       })
                     }
                   />
@@ -204,7 +222,7 @@ const Esperienze = () => {
                     onChange={(e) =>
                       setEsperienza({
                         ...esperienza,
-                        startDate: e.target.value
+                        startDate: e.target.value,
                       })
                     }
                   />
@@ -218,7 +236,7 @@ const Esperienze = () => {
                     onChange={(e) =>
                       setEsperienza({
                         ...esperienza,
-                        endDate: e.target.value
+                        endDate: e.target.value,
                       })
                     }
                   />

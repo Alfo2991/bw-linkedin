@@ -12,7 +12,8 @@ const Company = () => {
   }, []);
   const fetchJobs = async () => {
     const response = await fetch(
-      "https://strive-jobs-api.herokuapp.com/jobs?company=" + params.company
+      "https://strive-benchmark.herokuapp.com/api/jobs?company=" +
+        params.company
     );
     if (response.ok) {
       const res = await response.json();

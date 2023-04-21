@@ -1,9 +1,6 @@
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import Modal from "react-bootstrap/Modal";
-import { Button, Card, Image } from "react-bootstrap";
+import { Card, Image, Row, Col } from "react-bootstrap";
 import { Link, useLocation } from "react-router-dom";
-
+import Modal from "react-bootstrap/Modal";
 import { useState } from "react";
 
 const SinglePost = ({
