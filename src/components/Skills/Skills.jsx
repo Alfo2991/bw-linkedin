@@ -10,7 +10,7 @@ const Skills = () => {
   };
 
   const FrecciaSu = () => <i className="bi bi-chevron-compact-down ml-1"></i>;
-  const FrecciaGiu = () => <i class="bi bi-chevron-compact-up ml-1"></i>;
+  const FrecciaGiu = () => <i className="bi bi-chevron-compact-up ml-1"></i>;
   const skillsList = [
     {
       name: "HTML",

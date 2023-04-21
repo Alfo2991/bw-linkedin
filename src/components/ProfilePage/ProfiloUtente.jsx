@@ -11,7 +11,7 @@ const ProfiloUtente = ({ userID }) => {
         <>
           <Card
             style={{
-              borderRadius: "9px"
+              borderRadius: "9px",
             }}
             className=" mb-4 px-2"
           >
@@ -19,7 +19,7 @@ const ProfiloUtente = ({ userID }) => {
               className=" pb-4 "
               style={{
                 background: "#fff",
-                borderRadius: "7px"
+                borderRadius: "7px",
               }}
             >
               <Row className="profile__bg">
@@ -29,7 +29,11 @@ const ProfiloUtente = ({ userID }) => {
                 />
               </Row>
               <Row className="profile__photo ml-1">
-                <img className="img-fluid" src={userID.image} alt="fotoprofilo" />
+                <img
+                  className="img-fluid"
+                  src={userID.image}
+                  alt="fotoprofilo"
+                />
               </Row>
 
               <Col style={{ marginLeft: "9em" }}>
@@ -42,15 +46,27 @@ const ProfiloUtente = ({ userID }) => {
                     {userID.name} {userID.surname}
                   </h4>
                   <p className="my-0 occupation">{userID.title}</p>
-                  <p className="my-0 location text-muted">Milano, Lombardia, Italia</p>
+                  <p className="my-0 location text-muted">
+                    Milano, Lombardia, Italia
+                  </p>
 
-                  <p className="my-2 connections">200 follower - 164 collegamenti</p>
+                  <p className="my-2 connections">
+                    200 follower - 164 collegamenti
+                  </p>
                   <div className="d-flex justify-content-start w-100">
-                    <Button className="profile__button open-to-btn">Disponibile per</Button>
-                    <Button variant="outline-primary" className="add__btn profile__button  mx-3">
+                    <Button className="profile__button open-to-btn">
+                      Disponibile per
+                    </Button>
+                    <Button
+                      variant="outline-primary"
+                      className="add__btn profile__button  mx-3"
+                    >
                       Aggiungi sezione profilo
                     </Button>
-                    <Button variant="outline-secondary" className="profile__button">
+                    <Button
+                      variant="outline-secondary"
+                      className="profile__button"
+                    >
                       Altro
                     </Button>
                   </div>

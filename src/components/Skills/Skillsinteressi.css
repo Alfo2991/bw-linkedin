@@ -47,7 +47,7 @@
 }
 
 #interessi .card-text > p:first-child {
-  color: green;
+  color: rgb(0, 11, 128);
 }
 
 #skills .card-footer,
