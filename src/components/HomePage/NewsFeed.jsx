@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import "../FeaturedPosts/FeaturedPosts";
 import SingleNews from "./SingleNews";
-import "../Sidebar/Sidebar.css";
+
 import "./Home.css";
 
 const NewsFeed = ({ userID, setuserID }) => {
