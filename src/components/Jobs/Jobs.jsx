@@ -10,7 +10,7 @@ const Jobs = () => {
   }, []);
   const fetchJobs = async () => {
     const response = await fetch(
-      "https://strive-jobs-api.herokuapp.com/jobs?limit=10&skip=10"
+      "https://strive-benchmark.herokuapp.com/api/jobs"
     );
     if (response.ok) {
       const res = await response.json();
@@ -18,7 +18,7 @@ const Jobs = () => {
       console.log(job);
       setPosition(job);
     } else {
-      console.log("Qualcosa è andato storto durante il recupero dei dati");
+      console.log("Error1");
     }
   };
   return (

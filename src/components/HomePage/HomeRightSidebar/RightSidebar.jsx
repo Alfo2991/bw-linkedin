@@ -95,7 +95,7 @@ const RightSidebar = () => {
           <Col xs={12}>
             <a href="">
               {" "}
-              Privacy e condizioni <i class="bi bi-chevron-down"></i>{" "}
+              Privacy e condizioni <i className="bi bi-chevron-down"></i>{" "}
             </a>
             <a href="" className="mx-2">
               {" "}
@@ -106,7 +106,7 @@ const RightSidebar = () => {
             <a href=""> Advertising</a>
             <a href="" className="mx-2">
               {" "}
-              Servizi alle aziende <i class="bi bi-chevron-down"></i>{" "}
+              Servizi alle aziende <i className="bi bi-chevron-down"></i>{" "}
             </a>{" "}
           </Col>
           <Col xs={12}>
