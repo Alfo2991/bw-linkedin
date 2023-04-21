@@ -1,8 +1,5 @@
 import "../FeaturedPosts/FeaturedPosts";
 import Profile from "../ProfilePage/Profile";
-import Sidebar from "../Sidebar/Sidebar";
-
-import "../Sidebar/Sidebar.css";
 
 const Home = ({ userProfile, setUserProfile }) => {
   return (

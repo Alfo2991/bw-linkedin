@@ -21,20 +21,15 @@ const Profile = ({ userProfile, setUserProfile }) => {
       <Container className=" d-flex justify-content-between">
         <div>
           <Col className="profilepage pr-5">
-            <ProfiloUtente
-              userProfile={userProfile}
-              setUserProfile={setUserProfile}
-            />
+            <ProfiloUtente userProfile={userProfile} setUserProfile={setUserProfile} />
             <Attivita />
 
-            <Esperienze
-              userProfile={userProfile}
-              setUserProfile={setUserProfile}
-            />
+            <Esperienze userProfile={userProfile} setUserProfile={setUserProfile} />
             <Education />
             <Skills />
             <Corsi />
             <Interessi />
+            <Esperienze />
           </Col>
         </div>
         <div>

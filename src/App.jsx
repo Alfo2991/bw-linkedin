@@ -18,12 +18,7 @@ function App() {
       <BrowserRouter>
         <MyNav />
         <Routes>
-          <Route
-            path="/jobs"
-            element={
-              <Jobs userProfile={userProfile} setUserProfile={setUserProfile} />
-            }
-          />
+          <Route path="/jobs" element={<Jobs userProfile={userProfile} setUserProfile={setUserProfile} />} />
           <Route path="/company" element={<Company />} />
           <Route path="/:profile" element={<Profile />} />
           <Route path="/:footer" element={<MyFooter />} />
