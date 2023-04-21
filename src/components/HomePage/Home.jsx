@@ -4,12 +4,18 @@ import MyFooter from "../myFooter";
 import UserPosts from "./UserPosts";
 import SinglePost from "./SinglePost";
 import SingleNews from "./SingleNews";
+import Sidebar from "../mySideBar";
 //import NewsFeed from "./NewsFeed";  <NewsFeed />
 const Home = ({ userProfile, setUserProfile }) => {
   return (
     <>
       <UserPosts />
-      <div id="sidebar" className="pl-5 ml-5 mt-4"></div>
+      <div
+        id="sidebar"
+        className="pl-5 ml-5 mt-4 d-flex justify-content-between"
+      >
+        <Sidebar />
+      </div>
       <SinglePost />
       <SingleNews />
 
